@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Akshay",
+      "email": "akshay@gmail.com",
+      "mobile": 7448079363,
+      "city": "Nagpur"
+    },
+    {
+      "id": 2,
+      "name": "Akki",
+      "email": "ak@gmail.com",
+      "mobile": 987654321,
+      "city": "Bhandara"
+    },
+    {
+      "id": 3,
+      "name": "Sonu",
+      "email": "sonu123@gmail.com",
+      "mobile": 8421807963,
+      "city": "Gulbarga"
+    },
+    {
+      "id": 4,
+      "name": "Gaurav",
+      "email": "gaurav@gmail.com",
+      "mobile": 654555455,
+      "city": "Nagpur"
+    }
+  ],
+  "signup": [
+    {
+      "name": "Test",
+      "mobile": 12334556,
+      "email": "test@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "user",
+      "mobile": 7769022155,
+      "email": "user@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "user2",
+      "mobile": 656565655,
+      "email": "user2@gmail.com",
+      "password": "123",
+      "id": 4
+    }
+  ]
+}

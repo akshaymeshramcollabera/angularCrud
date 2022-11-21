@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <h2 class="text-light primary py-1">STUDENT MANAGEMENT SYSTEM</h2>
+
+      <div class="d-flex">
+          <div class="btn btn-primary" routerLink="/addstudent">Add Student</div>&nbsp;
+          <div routerLink="/login" class="btn btn-warning">Logout</div>
+      </div>
+    </div>
+</nav>
+
+<!-- Table -->
+<table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">S Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">City</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let data of allStudentData">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.mobile}}</td>
+        <td>{{data.city}}</td>
+        <td>
+            <!-- <button class="btn btn-info"  (click)="update(data)">Edit</button>&nbsp; -->
+            <button class="btn btn-info"  [routerLink]="['/editstudent', data.id]" >Edit</button>&nbsp;
+            <button class="btn btn-danger" (click)="deleteStudentData(data)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+

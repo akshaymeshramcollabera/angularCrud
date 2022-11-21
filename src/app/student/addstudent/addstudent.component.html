@@ -1,0 +1,53 @@
+<nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <h2 class="text-light primary py-1">STUDENT MANAGEMENT SYSTEM</h2>
+
+      <div class="d-flex">
+          <div routerLink="/login" class="btn btn-warning">Logout</div>
+      </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <div style="background: blue;" class="modal-header">
+          <h5 style="color: aliceblue; font-size: 20px; margin: left 62px; font-weight: 620;" class="modal-title" id="exampleModalLabel">STUDENT MANAGEMENT</h5>
+          <button type="button" routerLink="/student" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body">
+          <!-- Form -->
+          <form [formGroup]="formValue">
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Name</label>
+              <input type="text" class="form-control" formControlName="name" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter your name">
+              <small *ngIf="formValue.get('name')?.invalid && formValue.get('name')?.touched" class="text-danger">Name is Required</small>
+            </div>
+  
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+              <small *ngIf="formValue.get('email')?.invalid && formValue.get('email')?.touched" class="text-danger">Email is Required</small>
+            </div>
+  
+            <div class="mb-3">
+              <label for="exampleInputMobile" class="form-label">Mobile Number</label>
+              <input type="number" class="form-control" formControlName="mobile" id="exampleInputMobile" aria-describedby="mobileHelp" placeholder="Enter your mobile number">
+              <small *ngIf="formValue.get('mobile')?.invalid && formValue.get('mobile')?.touched" class="text-danger">Mobile Number is Required</small>
+            </div>
+  
+  
+            <div class="mb-3">
+              <label for="exampleInputCity" class="form-label">City</label>
+              <input type="text" class="form-control" formControlName="city" id="exampleInputCity" aria-describedby="cityHelp" placeholder="Enter your city">
+              <small *ngIf="formValue.get('city')?.invalid && formValue.get('city')?.touched" class="text-danger">City is Required</small>
+            </div>
+          </form>
+        </div>
+  
+        <div class="footer">
+          <button type="button" (click)="addStudent()" [disabled]="formValue.invalid" class="btn btn-primary">Add</button>
+        </div>
+  
+    </div>
+  </div>

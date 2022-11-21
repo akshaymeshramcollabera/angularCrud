@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Student Sign Up</h1>
+                </div>
+                <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                    <div class="mb-3">
+                      <label for="exampleInputName" class="form-label">Name</label>
+                      <input type="text" formControlName="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter your Name">
+                      <small *ngIf="signUpForm.get('name')?.invalid && signUpForm.get('name')?.touched" class="text-danger">Name is Required</small>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputMobile" class="form-label">Mobile Number</label>
+                      <input type="number" formControlName="mobile" class="form-control" id="exampleInputMobile" aria-describedby="mobileHelp" placeholder="Enter your Mobile Number">
+                      <small *ngIf="signUpForm.get('mobile')?.invalid && signUpForm.get('mobile')?.touched" class="text-danger">Mobile Number is Required</small>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Email">
+                      <small *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched" class="text-danger">Email is Required</small>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your Password">
+                      <small *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched" class="text-danger">Password is Required</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="signUpForm.invalid">Sign Up</button>
+                </form>
+                <a style="color: blue; margin-top: 10px; text-decoration: none;" routerLink="/login">Already Registered? Click here to Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
